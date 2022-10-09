@@ -1,0 +1,616 @@
+
+//check task 15 have recursion
+//Task 2
+let Personal_Message="Hello umer";
+
+
+let name="umer hussain chaiwala";
+
+
+console.log(Personal_Message);
+
+//Task3
+function titleCase(a)
+{
+    let O =[];
+    O[0]=a[0].toUpperCase();
+    //console.log(O[0])
+    
+    for(let i=1;i<a.length;i++)
+    {
+         O[i]=a[i];
+         if(a[i]==' ')
+         {
+            O[i]=a[i].toUpperCase();
+            // console.log(a[i]);
+             O[i+1]=a[i+1].toUpperCase();
+             i++;
+            
+         }
+    }
+    return O;
+
+}
+console.log(name.toLowerCase());
+console.log(name.toUpperCase());
+let convertArrayToString=[];
+convertArrayToString=titleCase(name);
+
+console.log(convertArrayToString.join(''));
+
+//Task 4
+console.log('Albert Einstein once said, "A person who never made a mistake never tried anything new."');
+//Task5
+
+let aName="Albert Einstein";
+let quote="once said, “A person who never made a mistake never tried anything new.”";
+let combine=aName+quote;//concatenation
+console.log(combine);
+//Task6
+let nameMe="Hiba";
+console.log("\t"+nameMe+"\t \n" );
+//Task7
+
+let eight=8;
+
+let sum=(b)=>b+eight;
+let mult=(b)=>b*eight;
+let div=(b)=>b/eight;
+let sub=(b)=>b-eight;
+
+console.log("result of add: "+sum(16));
+console.log("result of Multi: "+mult(16));
+console.log("result of Div: "+div(16));
+console.log("result of subs: "+sub(16));
+
+
+//Task 9
+
+let fav=(a)=>{
+    let message=a+". From Happy world to Hello world ";
+    
+    return message;
+}
+console.log(fav(9));
+
+//task 10
+
+//Umer is my name,7 oct , i have arrow funtions and concatenation.
+
+//task 11
+function newNames(b){
+    console.log(b);
+}
+let names=['Umer','Mohid','Ashar','Haider'];
+let newnames=names.map(newNames)
+
+//task 12
+names.map(greet);
+function greet(b){
+    console.log("AslamuAlikum "+b);
+}
+
+//task 13
+
+let List=["Motorcyle","Bus","Car"];
+List.map(check);
+
+function check(b)
+{
+    if(b[0])
+    {
+        console.log("Honda "+b+" is love!\n");
+    }
+    else if(b[1])
+    {
+        console.log("Red "+b+" is love!\n");
+
+    }
+    else if(b[2])
+    {
+        console.log("BMW "+b+" is love!\n");
+    }
+}
+
+//task 14
+names.map(invite);
+function invite(b)
+{
+    console.log(b+" is invited!\n");
+}
+
+//task 15
+console.log("Mohid and haider cant make dinner");
+let ops=[names[1],names[3]];
+
+let newN=["Rocky","James"];
+function recursion(b,i,j,newN,ops)
+{
+    if(b.length==i)
+    {
+        return ;
+    }
+    else
+    {
+        if(b[i]==ops[j])
+        {
+            b[i]=newN[j];
+            console.log(b[i]);
+            recursion(b,i+1,j+1,newN,ops);
+
+
+        }
+        else
+        {
+            recursion(b,i+1,j,newN,ops);
+        }
+    }
+}
+recursion(names,0,0,newN,ops);
+names.map(invite);
+
+//task 16
+
+ names.push("Saad");
+names.unshift("Khalid");
+names.splice(parseInt(names.length/2),0,"John Cena");
+console.log("You have found bigger table "+names[0]+" "+names[parseInt(names.length/2)]+" "+names.at(names.length-1)+" is added");
+
+
+
+//task 17
+
+console.log("Invite only 2 person");
+remove(names,2)
+
+function remove(n,b)
+{
+    while(n.length>b)
+    {
+        console.log("Sorry Bro We have less space "+n.pop());
+        if(!n.length)
+        {
+            break;
+        }
+    }
+    
+
+}
+names.map(invite);
+//
+remove(names,-1);
+names.map(invite);
+
+
+//task 18
+
+function show(b)
+{
+    let i=0;
+    while(i<b.length)
+    {
+        console.log(b[i]+" ");
+        i++;
+    }
+    console.log("\n");
+
+}
+let places=["London","New York","Sydeny","Dubai","Jumera"];
+show(places);
+let newarr1=places.slice().sort();
+show(newarr1);
+show(places);
+newarr2=newarr1.slice().reverse();
+show(newarr2);
+show(places);
+places.reverse();
+show(places);
+places.reverse();
+show(places);
+places.sort();
+show(places);
+places.reverse();
+show(places);
+//task 19
+
+let sum1=(arr)=>{
+    return arr.length;
+
+}
+console.log("No of places " +sum1(places));
+console.log("No of people " +sum1(names));
+
+//task 20
+
+let mountains=["K2","Mount Everest"," Himaliya","Hindu Kush"];
+
+//task 21
+
+let mobile=[{
+    name:"iphone",
+    model_no:212222,
+    ram:32,
+    camera:64
+
+},{
+    name:"Samsung",
+    model_no:321332,
+    ram:12,
+    camera:32
+
+},{name:"Xioami",
+    model_no:41332,
+    ram:12,
+    camera:12
+
+}]
+
+//task 22
+
+//console.log(mobile[4].camera);
+
+//task 23
+
+console.log(names[0]=="Umer"? "true":"false");//ternary operators
+console.log(names[0]==null? "true":"false");
+console.log(places[0]=="London"?"Uk":places[0]=="Dubai"?"UAE":places[0]=="Jumera"?"UAE":"Dont No Bro");
+console.log(names[0]=="Umer" ||"Driving");//short circuiting operator
+console.log(names[0]==null&&"Happy");
+
+//task 24
+let u=places[3].toLowerCase();
+console.log(places[3]==u?"Uk":places[0]=="Dubai"?"UAE":places[0]=="Jumera"?"UAE":"Dont No Bro");
+console.log((3+2)==(3+1+1)&& u==u);
+
+//task 25
+let alien_color="red";
+
+test(alien_color);
+function test(b)
+{
+    if(b=="green")
+    {
+        console.log("5 points");
+        
+    }
+    else
+    {
+        
+
+    }
+
+}
+
+//task26
+test3(alien_color)
+function test2(b)
+{
+    if(b=="green")
+    {
+        console.log("5 points");
+        
+    }
+    else
+    {
+        
+console.log("10 points");
+    }
+
+}
+//task 27
+test3(alien_color)
+function test3(b)
+{
+    if(b=="green")
+    {
+        console.log("5 points");
+        
+    }
+    else if(b=="yellow")
+    {
+        console.log("10 points");
+
+    }
+    else if(b=="red")
+    {
+console.log("15 points");
+    }
+    
+
+}
+
+//task 28
+
+age=21;
+function test4(b)
+{
+    if(b<2)
+    {
+        console.log("Baby");
+        
+    }
+    else if(b>=2 && b<4)
+    {
+        console.log("Toddler");
+
+    }
+    else if(b>=4 && b<13)
+    {
+        console.log("Kid");
+
+    }
+    else if(b>=13 && b<20)
+    {
+        console.log("teenager");
+
+    }
+    else if(b>=20 && b<65)
+    {
+console.log("adult");
+    }
+    else{
+        console.log("elder");
+
+    }
+
+}
+
+let fruit=["Banana","Apple","Mango"];
+
+test9(fruit);
+function test9(f)
+{
+    let i=0;
+    while(i<f.length)
+    {
+
+        if(f[i]=="Banana")
+        {
+            console.log("You really like bananas");
+        }
+        else if(f[i]=="Mango")
+        {
+            console.log("You really like Mango");
+        }
+        else if(f[i]=="Apple")
+        {
+            console.log("You really like Apple");
+
+        }
+        else if(f[i]=="stawberry")
+        {
+            console.log("You really like Stawberry");
+        }
+        else if(f[i]=="Aloo")
+        {
+            console.log("You really like Aloo");
+        }
+        i++;
+    }
+}
+
+
+//task 30
+
+let array=["Admin","Mohid","Ashar","Haider","Umer"];
+ greet2(array);
+ function greet2(b){
+
+    let i=0;
+    while(i<b.length)
+    {
+        if(b[i]=="Admin")
+        {
+            console.log("Hello admin, would you like to see a status report?");
+        }
+        else{
+            console.log("AslamuAlikum "+b[i]);
+        }
+        i++
+    }
+    
+}
+
+//task 31
+let Current_user=["Admin","Mohid","Ashar","Haider","Umer"];
+let new_user=["ADMIN","Saad","khalid","shahid","Umer"];
+
+login(Current_user,new_user);
+function login(b,b2)
+{
+    for(let i=0;i<b.length;i++)
+    {
+        let count=0;
+        for(let j=0;j<b2.length;j++)
+        {
+            if(b[i].toLowerCase()==b2[j].toLowerCase())
+            {
+                count++;
+                console.log(b[j]+" the person will need to enter a new username");
+            }
+        
+
+        }
+        if(count==0)
+        {
+console.log(b[i]+"  the username is available");
+        }
+    }
+
+}
+//task33
+let odi=[1,2,3,4,5,6,7,8,9];
+
+checkO(odi);
+function checkO(b)
+{
+    for(let i=0;i<b.length;i++)
+    if(b[i]==1)
+    {
+        console.log(b[i]+"st");
+    }
+    else if(b[i]==2)
+    {
+     console.log(b[i]+"nd");   
+    }
+    else if(b[i]==3)
+    {
+        console.log(b[i]+"rd");
+    }
+    else
+    {
+        console.log(b[i]+"th");
+    }
+}
+//task 34
+
+let pizza=["peproni","italic","tikka"];
+
+function favPiza(b)
+{
+    for(let j=0;j<b2.length;j++)
+        {
+            
+            {
+                
+                console.log("i like "+b[j]+" pizza");
+            }
+        
+
+
+        }
+        console.log("three or more lines about the kinds of pizza I like"+b[2]+"  I really love pizza!");
+}
+//task 35
+
+let animals=["Lion","Tiger","leoperd"];
+
+let mess="All are Carnivores";
+
+character(animals,mess);
+function character(ani,mess)
+{
+    for(let i=0;i<ani.length;i++)
+    {
+        console.log(ani[i]+" is Beast animal")
+    }
+    console.log(mess);
+}
+//task 36 37
+let size="large";
+make_shirt(size,mess)
+function make_shirt(b,b2)
+{
+    if(b=="large" || b=="medium")
+    {
+        let default_m="I Love JS";
+        console.log("size: " +b+" "+default_m);
+        return;
+
+    }
+    console.log("size: " +b+" "+b2);
+}
+//task 38
+let city=["Karachi","Lahore","Quetta"];
+describe_city(city);
+function describe_city(city,country="Pakistan")
+{
+    for(let i=0;i<city.length ;i++)
+    {
+        console.log(city[i]+" is in "+country[i]);
+    }
+    
+}
+//task 39
+console.log (city_country(city[0],"PAKISTAN"));
+console.log (city_country(city[1],"PAKISTAN"));
+console.log (city_country(city[2],"PAKISTAN"));
+function city_country(city,country)
+{
+    return city+","+country;
+}
+//task 40
+
+let a=makeObject("Starboy","Weekend",5);
+console.log("Name Of Ablum:" +a.title+"\nName of Artist: "+a.name+"\nTrack No: "+a.trackno);
+
+let r=makeObject("Timeback","Tupac");
+console.log("Name Of Ablum:" +r.title+"\nName of Artist: "+r.name);
+
+function makeObject(title,name,track=0)
+{
+    if(track>0)
+    {
+
+    
+    let album={
+        title:title,
+        name:name,
+        trackno:track
+
+    }
+return album;}
+    else
+    {
+        let album={
+        title:title,
+        name:name
+
+    }
+return album;
+    }
+
+}
+
+//task 41
+
+let magician_names=["Admin","Mohid","Ashar","Haider","Umer"];;
+
+show(magician_names);
+function make_great(name)
+{
+    
+
+    
+    return "the great "+name;
+
+}
+let annew=magician_names;
+for(let i=0;i<magician_names.length;i++)
+{
+    annew[i]=make_great(magician_names[i])
+}
+show(annew);
+ 
+//task 44 ambigoius doing with own understanding
+
+let item=["cucumber","Chicken","Bread"];
+
+function make_Sandwitch(item,length)
+{
+    for(let i=0;i<item.length;i++)
+    console.log("Summary: "+item[i]);
+
+}
+makecar("c","f");
+//task 45 didnt understand it
+
+function makecar(...args)
+{
+
+    let item=[];
+    for(let i=0;i<args.length;i++)
+    {
+        item[i]=args[i];
+        
+
+    }
+    let car={
+        manufacture:item[0],
+        model:item[1]
+
+    }
+    
+}
+
+
